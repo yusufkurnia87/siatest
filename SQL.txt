@@ -1,0 +1,51 @@
+CREATE TABLE kelas (
+    kodekelas varchar(10) PRIMARY KEY NOT null,
+    namaruangan varchar(30),
+    gedung varchar(10),
+    jumlahbangku int(11),
+    keterangan text
+    );
+
+INSERT INTO mtkul
+VALUES ('MTK001', 'Matemateika Diskrit', '4', 'ds003'),
+	('MTK002', 'Jaringan Komputer', '2', 'ds002'),
+	('MTK003', 'Pemograman 1', '4', 'ds001');
+
+INSERT INTO dosen
+VALUES 	('ds001', 'Suep', '1992-04-01, 'Cikupa', 'S1'),
+	('ds002', 'Bejoo', '1982-02-10, 'Tangerang', 'S2'),
+	('ds002', 'Saipul', '1981-06-19, 'Tangerang', 'S2');
+
+INSERT INTO dosen 
+VALUES 	('ds001', 'Suep', '1992-04-01', 'Cikupa', 'S1');
+         
+INSERT INTO dosen 
+VALUES ('ds002', 'Bejoo', '1982-02-10', 'Tangerang', 'S2');
+
+INSERT INTO dosen 
+VALUES	('ds003', 'Saipul', '1981-06-19', 'Tangerang', 'S2');
+
+INSERT INTO kelas
+VALUES ('KDK001', 'D301', '4', 'Gedung D', 29, Layak),
+	('KDK002', 'D201', '4', 'Gedung D', 30, Layak),
+	('KDK003', 'D401', '4', 'Gedung D', 25, Layak);
+	
+UPDATE dosen Set nama = 'Ujang' Where kode_dosen = 'ds002'
+
+UPDATE dosen Set jenjang = 'S3' where alamat = 'Cikupa'
+
+Delete from dosen where kode_dosen = 'ds003'
+
+SELECT DISTINCT FirstName, Address, City FROM persons;
+
+SELECT*FROM persons where FirstName = "Kari"
+
+SELECT DISTINCT FirstName, Address, LastName FROM persons where city = 'Stavanger';
+
+SELECt*From persons where Address = 'Timoteivin 10' Or City = 'Sandness'
+
+SELECt*From persons where Address = 'Timoteivin 10' AND City = 'Sandness'
+
+SELECT*FROM persons WHERE FirsName LIKE '%en%'
+
+SELECT * FROM persons WHERE p_id BETWEEN '1' AND '4'
